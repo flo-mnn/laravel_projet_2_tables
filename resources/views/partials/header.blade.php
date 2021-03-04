@@ -9,10 +9,10 @@
           <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Gender</a>
+          <a class="nav-link" href="/genders/create">Add Gender</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Member</a>
+          <a class="nav-link" href="/members/create">Add Member</a>
         </li>
       </ul>
     </div>

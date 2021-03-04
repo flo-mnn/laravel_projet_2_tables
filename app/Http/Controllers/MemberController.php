@@ -53,6 +53,9 @@ class MemberController extends Controller
         $newEntry->gender = $request->gender;
         $newEntry->name = $request->name;
         $newEntry->age = $request->age;
+        $newEntry->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -104,6 +107,6 @@ class MemberController extends Controller
     {
         $img = Member::find($id);
 
-        return Storage::download('public/img'.$img->src);
+        return Storage::download('public/img/'.$img->src);
     }
 }

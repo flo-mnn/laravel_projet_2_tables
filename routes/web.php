@@ -3,6 +3,7 @@
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\MemberController;
 use App\Models\Gender;
+use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $members = Member::all();
+    return view('welcome', compact('members'));
 });
 Route::get('/download/{id}',[MemberController::class,'download']);
 Route::resource('genders',GenderController::class);
